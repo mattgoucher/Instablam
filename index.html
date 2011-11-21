@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Instablam : The Instagram Fetcher</title>
+	</head>
+	<body>
+	<div id="main" class="full">
+		<div class="section fotos instagram">
+			<!-- Load Photos Here -->
+		</div>
+	</div>
+	<script src="jquery.instablam.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$('.section.instagram').instablam({
+				'tag'			:	'super-awesome-tag',
+				'client_id'		:	'my_instagram_api_client_id',
+				'scrollToTop'	:	false,
+			});
+		});
+	</script>
+	</body>
+</html>
