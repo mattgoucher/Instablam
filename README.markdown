@@ -5,15 +5,15 @@
 Very little setup is required to get the plugin up and running. You must have an Instagram developer account. 
 
 ### Features
-	* Automagically fetches more photos when the user reaches the last photo
-	* Remembers where a user left off when they revisit your website
-		* Set `'rememberPosition' : true` to enable
-	* Error Handling
-		* If Instagram sends back an error, we'll let you know
-	* Get the number of photos that are tagged (with the specified tag)
-		* Run the `countTags()` method to return the count
-	* Adds a style-able button to scroll the user to top of photos
-	* Ability to limit how many fetches a user can get
+* Automagically fetches more photos when the user reaches the last photo
+* Remembers where a user left off when they revisit your website
+	* Set `'rememberPosition' : true` to enable
+* Error Handling
+	* If Instagram sends back an error, we'll let you know
+* Get the number of photos that are tagged (with the specified tag)
+	* Run the `countTags()` method to return the count
+* Adds a style-able button to scroll the user to top of photos
+* Ability to limit how many fetches a user can get
 
 #### HTML
 ```html
@@ -37,8 +37,8 @@ Very little setup is required to get the plugin up and running. You must have an
 	});
 ```
 
-*Release Notes:*
-	* Currently, when you supply a client_id you (that id) is limited to 5000 requests per hour.
-		 * After that limit is hit, Instagram will send back an error
-	* In the near future, support for Implicit authentication will be added as an option
-		* This allows for many more ways to use the API
+### Release Notes:
+* Currently, when you supply a client_id you (that id) is limited to 5000 requests per hour.
+	* After that limit is hit, Instagram will send back an error
+* In the near future, support for Implicit authentication will be added as an option
+	* This allows for many more ways to use the API
