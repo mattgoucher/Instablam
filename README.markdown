@@ -1,50 +1,51 @@
-# Instablam
+# jQuery Simple Captioner
 
-### A jQuery plugin that grabs photos from Instagram
+### a simple plugin that adds some nifty captions to your images.
 
-Very little setup is required to get the plugin up and running. You must have an Instagram developer account. 
+Its pretty simple, if your images have a class of `caption` and they have the HTML attribute `title` they will get Captioned. Added support for basic HTML in captions as well. 
 
-### Features
-* Automagically fetches more photos when the user reaches the last photo
-* Remembers where a user left off when they revisit your website
-	* Set `'rememberPosition' : true` to enable
-* Error Handling
-	* If Instagram sends back an error, we'll let you know
-* Get the number of photos that are tagged (with the specified tag)
-	* Run the `countTags()` method to return the count
-* Adds a style-able button to scroll the user to top of photos
-* Ability to limit how many fetches a user can get
+### Setup
+
 
 #### HTML
 ```html
 	<!-- Include The Javascript -->
-	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="/path/to/jquery.instablam.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/path/to/jquery.captioner.js" type="text/javascript" charset="utf-8"></script>
+	
+	<!-- Adding An Image -->
+	<img class="caption" src="/path/to/image.jpg" title="Image Caption"  />
 ```
+*Note:* The class of 'caption' must be specified, or the image will not be captioned.
 
 #### Javascript
 ```javascript
-	// Start The Plugin
+	// Enable Captioning (With A Fallback Caption)
 	$(document).ready(function(){
-		$('#where-you-want-photos-to-go').instablam({
-			'client_id'				:		'client-id',	// Your Instagram Client ID
-			'tag'					:		'cars',			// The Tag You Want To Pull
-			'maxFetches'			:		10,				// Limit The Number of Fetches a User gets
-			'totalCount'			:		18,				// How many photos are displayed per page
-			'scrollToTop'			:		true/false,		// Add the scroll to top button?
-			'rememberPosition'		:		true/false,		// Set a cookie to remember the users position?
-			
+		$('.caption').captioner({
+			'title' : 'My Fallback Caption!'
 		});
+	});
+	
+	
+	// Enable Captioning (No Fallback Caption)
+	$(document).ready(function(){
+		$('.caption').captioner();
 	});
 ```
 
-### Release Notes:
-* Currently, when you supply a client_id you (that id) is limited to 5000 requests per hour.
-	* After that limit is hit, Instagram will send back an error
-* In the near future, support for Implicit authentication will be added as an option
-	* This allows for many more ways to use the API
-	
-	
+### Update Log:
+1. Version 0.1
+	* Adding Padding-Offset support
+		* Allows you to span the text across the entire image (without padded edges)
+	* Added README :D
+	* Clean Up
+		* Removing DS_Store
+	* Adding Support For Fallback Language
+	* Deprecated
+		* paddingOffset
 
-#### License
-Instablam by Matt Goucher is licensed under a Creative Commons Attribution 3.0 Unported License.
+
+
+
+##### License
+Instablam by Matt Goucher is licensed under a Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
