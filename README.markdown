@@ -18,6 +18,7 @@ Very little setup is required to get the plugin up and running. You must have an
 #### HTML
 ```html
 	<!-- Include The Javascript -->
+	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/path/to/jquery.instablam.js" type="text/javascript" charset="utf-8"></script>
 ```
 
@@ -42,3 +43,8 @@ Very little setup is required to get the plugin up and running. You must have an
 	* After that limit is hit, Instagram will send back an error
 * In the near future, support for Implicit authentication will be added as an option
 	* This allows for many more ways to use the API
+	
+	
+
+#### License
+Instablam by Matt Goucher is licensed under a Creative Commons Attribution 3.0 Unported License.
