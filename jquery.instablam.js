@@ -120,7 +120,7 @@
 				cache: false,
 				url: nextURL,
 				success: function(response) {
-					console.log(response);
+
 					// Check For Errors Before Moving Forward
 					if( handleResponse(response) ) { return; }
 
